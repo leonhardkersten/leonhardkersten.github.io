@@ -119,5 +119,22 @@
         <p>Contact: <a href="mailto:your-email@example.com">leonhard.kersten@gmail.com</a></p>
     </footer>
 
+        <script>
+        // JavaScript for the collapsible feature
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                // Toggle display of content
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+
 </body>
 </html>
