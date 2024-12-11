@@ -8,25 +8,23 @@
     <style>
         body {
             font-family: 'Helvetica', sans-serif;
-            background-color: #b3e0ff; /* Light blue background */
+            background-color: #b3e0ff;
             color: #333;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
             min-height: 100vh;
-            padding: 10px 20px; /* Add white space on the sides */
+            padding: 10px 20px;
         }
         header {
             display: flex;
-            justify-content: flex-start;
             align-items: center;
-            background-color: #ffffff; /* White header */
+            background-color: #ffffff;
             width: 100%;
-            padding: 20px 40px; /* Half the original space above */
-            margin-bottom: 20px; /* Add spacing between header and main content */
+            padding: 20px 40px;
+            margin-bottom: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
@@ -55,8 +53,8 @@
         }
         p {
             font-size: 18px;
-            margin-bottom: 20px;
             line-height: 1.6;
+            text-align: justify;
         }
         .cv-link-container {
             margin-bottom: 40px;
@@ -71,10 +69,10 @@
             transition: background-color 0.3s;
         }
         .cv-link:hover {
-            background-color: #0056b3; /* Darker blue */
+            background-color: #0056b3;
         }
         .collapsible {
-            background-color: #007bff; /* Blue button */
+            background-color: #007bff;
             color: white;
             cursor: pointer;
             padding: 14px;
@@ -97,6 +95,7 @@
             margin-top: 5px;
             border-radius: 0 0 5px 5px;
             font-size: 16px;
+            text-align: justify;
         }
         footer {
             background-color: #ffffff;
@@ -125,70 +124,5 @@
 
     <main>
         <h2>About Me</h2>
-        <p> My name is Leonhard Kersten and I am a Ph.D. Candidate at the Université Sorbonne Paris Nord and Visiting Scholar at the Center for the Integration of Science and Industry at Bentley University.
-        I am a Researcher at the Academic-Industry Research Network (https://theairnet.org/leonhard-kersten/) and at the Berlin Centre for Empirical Economics at the Berlin School of Economics and Law.
-        My research interests are corporate financialization, innovation dynamics, and public health outcomes. 
-        I have extensively worked on econometric models and developed skills in agent-based modelling. </p>
-
-        <h2>CV</h2>
-        <div class="cv-link-container">
-            <a href="https://github.com/leonhardkersten/leonhardkersten.github.io/raw/main/cv.pdf" class="cv-link" target="_blank">Click here to view my CV</a>
-        </div>
-
-        <h2>Research Projects</h2>
-        <p>Explore my research projects below, where you will find my current Job Market paper and a detailed description of my research as part of the Ph.D. thesis.</p>
-
-        <!-- Project 1 -->
-        <button class="collapsible">Job Market Paper: The Association between Gender Diversity of Companies' Executives and Corporate Tax Avoidance</button>
-        <div class="content">
-            <p>This paper analyzes the possible link between female leadership and corporate tax avoidance. Specifically, the study investigates if companies with women as chief financial officers (CFO) engage less in tax avoidance practices.
-            This analysis compiles a panel of 355 S&P500 listed companies covering the years 2010-2023. Various panel regressions are conducted to establish the relationship between women CFOs and tax avoidance.
-            The various regression models of this study indicate that the presence of a woman CFO is associated with a reduction in corporate tax avoidance. 
-            Concerning the control variables, the associated partial effects are comparable to previous research and provide a further indication of the validity of our results.
-            To the best of the authors' knowledge, this is the first study that compiles an up-to-date panel of comparable and economically important (S\&P500) firms to investigate the link between CFO gender diversity and corporate tax avoidance. 
-            Financial firms (that are prone to tax avoidance) are explicitly excluded. Firm-level and alternatively industry-level fixed effects models are employed to mitigate endogeneity concerns. 
-            The robustness of the results is further probed by considering different sets of control variables.
-            
-            Currently under review at Corporate Governance: The International Journal of Business in Society (CG)</p>
-        </div>
-
-        <!-- Project 2 -->
-        <button class="collapsible">Ph.D. research:  The evolution of the pharmaceutical industrial ecosystem in times of biotech innovation, corporate financialization and COVID 19</button>
-        <div class="content">
-            <p>The COVID-19 pandemic highlighted the importance of drug development and raised critical questions about vaccine ownership and distribution, particularly in the context of global inequities between the North and South.
-            Collaborative efforts, such as the partnership between BioNTech and Pfizer, demonstrated the potential of combining public funding, academic research, and private sector capabilities to innovate and manufacture life-saving vaccines.
-            Collaborations are steadily increasing, driven by the pharmaceutical industry's dynamic nature and the rise in public interest and funding. This trend coincides with the expansion of the biotechnology sector, leading to the creation of new firms
-            that often become targets for collaborations or acquisitions by established players. 
-            Corporate financialization, defined as the subordination of firm strategies to financial capital accumulation and shareholder value ideology, has profoundly shaped these dynamics. 
-            The research explores how corporate financialization and post-COVID-19 restructuring influence the pharmaceutical industry, including the ethical implications of drug innovation, oligopoly power, and the impact of drug pricing on public health.
-            With the aim of exploring and identifying the linkages between the seemingly distinct but implicitly close-knit dynamics of industrial reorganization during finance-led capitalism from a political-economic perspective, 
-                the research questions for this doctoral study are:
-           - How are collaborations and acquisitions in the pharmaceutical industry organized, what are their determinants, and which dynamics are involved?
-           - How do they impact the drug innovation process and at which stages are which kinds of cooperation commonly used?
-           - Who are the financial and non-financial actors behind the proliferation of strategies and how do their incentives shape the specific role of the actors? What is the impact on the public? </p>
-        </div>
-    </main>
-
-    <footer>
-        <p>Contact: <a href="mailto:leonhard.kersten@gmail.com">leonhard.kersten@gmail.com</a></p>
-    </footer>
-
-    <script>
-        // JavaScript for the collapsible feature
-        var coll = document.getElementsByClassName("collapsible");
-        for (var i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                // Toggle display of content
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    content.style.display = "block";
-                }
-            });
-        }
-    </script>
-
-</body>
-</html>
+        <p>
+            My name is Leonhard Kersten, and I am a Ph.D. Candidate at the Université Sorbonne Paris Nord and Visiting Scholar at the Center for the Integration of Science and Industry at Bentley Universit
