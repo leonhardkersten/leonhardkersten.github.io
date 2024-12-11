@@ -88,7 +88,7 @@
             background-color: #0056b3;
         }
         .content {
-            padding: 0 18px;
+            padding: 18px;
             display: none;
             background-color: #f9f9f9;
             border-left: 4px solid #007bff;
@@ -96,6 +96,7 @@
             border-radius: 0 0 5px 5px;
             font-size: 16px;
             text-align: justify;
+            line-height: 1.6;
         }
         footer {
             background-color: #ffffff;
@@ -125,4 +126,69 @@
     <main>
         <h2>About Me</h2>
         <p>
-            My name is Leonhard Kersten, and I am a Ph.D. Candidate at the Université Sorbonne Paris Nord and Visiting Scholar at the Center for the Integration of Science and Industry at Bentley Universit
+            My name is Leonhard Kersten, and I am a Ph.D. Candidate at the Université Sorbonne Paris Nord and Visiting Scholar at the Center for the Integration of Science and Industry at Bentley University.
+            I am a Researcher at the <a href="https://theairnet.org/leonhard-kersten/" target="_blank">Academic-Industry Research Network</a> and at the Berlin Centre for Empirical Economics at the Berlin School of Economics and Law.
+            My research interests are corporate financialization, innovation dynamics, and public health outcomes. I have extensively worked on econometric models and developed skills in agent-based modelling.
+        </p>
+
+        <h2>CV</h2>
+        <div class="cv-link-container">
+            <a href="https://github.com/leonhardkersten/leonhardkersten.github.io/raw/main/cv.pdf" class="cv-link" target="_blank">Click here to view my CV</a>
+        </div>
+
+        <h2>Research Projects</h2>
+        <p>
+            Explore my research projects below, where you will find my current Job Market paper and a detailed description of my research as part of the Ph.D. thesis.
+        </p>
+
+        <!-- Project 1 -->
+        <button class="collapsible">Job Market Paper: The Association between Gender Diversity of Companies' Executives and Corporate Tax Avoidance</button>
+        <div class="content">
+            <p>
+                This paper analyzes the possible link between female leadership and corporate tax avoidance. Specifically, the study investigates if companies with women as chief financial officers (CFO) engage less in tax avoidance practices.
+                This analysis compiles a panel of 355 S&P500 listed companies covering the years 2010-2023. Various panel regressions are conducted to establish the relationship between women CFOs and tax avoidance.
+                The various regression models of this study indicate that the presence of a woman CFO is associated with a reduction in corporate tax avoidance. 
+                Concerning the control variables, the associated partial effects are comparable to previous research and provide a further indication of the validity of our results.
+                To the best of the authors' knowledge, this is the first study that compiles an up-to-date panel of comparable and economically important (S\&P500) firms to investigate the link between CFO gender diversity and corporate tax avoidance. 
+                Financial firms (that are prone to tax avoidance) are explicitly excluded. Firm-level and alternatively industry-level fixed effects models are employed to mitigate endogeneity concerns. 
+                The robustness of the results is further probed by considering different sets of control variables.
+                Currently under review at Corporate Governance: The International Journal of Business in Society (CG).
+            </p>
+        </div>
+
+        <!-- Project 2 -->
+        <button class="collapsible">Ph.D. research: The evolution of the pharmaceutical industrial ecosystem in times of biotech innovation, corporate financialization and COVID-19</button>
+        <div class="content">
+            <p>
+                The COVID-19 pandemic highlighted the importance of drug development and raised critical questions about vaccine ownership and distribution, particularly in the context of global inequities between the North and South.
+                Collaborative efforts, such as the partnership between BioNTech and Pfizer, demonstrated the potential of combining public funding, academic research, and private sector capabilities to innovate and manufacture life-saving vaccines.
+                Collaborations are steadily increasing, driven by the pharmaceutical industry's dynamic nature and the rise in public interest and funding. This trend coincides with the expansion of the biotechnology sector, leading to the creation of new firms
+                that often become targets for collaborations or acquisitions by established players. 
+                Corporate financialization, defined as the subordination of firm strategies to financial capital accumulation and shareholder value ideology, has profoundly shaped these dynamics. 
+                The research explores how corporate financialization and post-COVID-19 restructuring influence the pharmaceutical industry, including the ethical implications of drug innovation, oligopoly power, and the impact of drug pricing on public health.
+                With the aim of exploring and identifying the linkages between the seemingly distinct but implicitly close-knit dynamics of industrial reorganization during finance-led capitalism from a political-economic perspective, 
+                the research questions for this doctoral study are:
+                - How are collaborations and acquisitions in the pharmaceutical industry organized, what are their determinants, and which dynamics are involved?
+                - How do they impact the drug innovation process and at which stages are which kinds of cooperation commonly used?
+                - Who are the financial and non-financial actors behind the proliferation of strategies and how do their incentives shape the specific role of the actors? What is the impact on the public?
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact: <a href="mailto:leonhard.kersten@gmail.com">leonhard.kersten@gmail.com</a></p>
+    </footer>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                content.style.display = (content.style.display === "block") ? "none" : "block";
+            });
+        }
+    </script>
+
+</body>
+</html>
