@@ -8,30 +8,31 @@
     <style>
         body {
             font-family: 'Helvetica', sans-serif;
-            background: linear-gradient(45deg, #e0e0e0, #f4f4f4), url('https://www.transparenttextures.com/patterns/asfalt-light.png');
-            background-repeat: repeat;
+            background: linear-gradient(135deg, #e6e6e6, #ffffff);
             color: #333;
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: row;
             min-height: 100vh;
         }
         .sidebar {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             justify-content: flex-start;
             background-color: #fff;
-            width: 200px;
-            padding: 20px;
-            box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            padding: 25px;
+            box-shadow: 3px 0 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 20px;
         }
         .sidebar img.profile {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             margin-bottom: 20px;
             border-radius: 50%;
+            border: 3px solid #ddd;
         }
         .sidebar .icon {
             width: 20px;
@@ -40,86 +41,92 @@
             cursor: pointer;
         }
         .sidebar .icon-text {
-            font-size: 14px;
-            color: #444;
-        }
-        .icon:hover {
-            opacity: 0.7;
+            font-size: 15px;
+            color: #555;
         }
         .sidebar div {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            transition: color 0.3s;
+        }
+        .sidebar div:hover {
+            color: #007BFF;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: inherit;
         }
         main {
+            flex: 1;
             text-align: center;
-            padding: 20px;
-            max-width: 1200px;
+            padding: 40px;
+            max-width: 1100px;
             width: 100%;
             margin: 0 auto;
             background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
         }
         h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: #555;
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #444;
         }
         p {
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.7;
             text-align: justify;
-            color: #444;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 20px;
         }
         .cv-link-container {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         .cv-link {
             display: inline-block;
-            background-color: #666;
+            background-color: #007BFF;
             color: white;
-            padding: 12px 25px;
+            padding: 14px 30px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-weight: bold;
             transition: background-color 0.3s;
         }
         .cv-link:hover {
-            background-color: #444;
+            background-color: #0056b3;
         }
         .collapsible {
-            background-color: #666;
+            background-color: #28a745;
             color: white;
             cursor: pointer;
-            padding: 14px;
+            padding: 15px;
             width: 100%;
             text-align: left;
-            font-size: 16px;
+            font-size: 18px;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             margin-top: 10px;
             transition: background-color 0.3s;
         }
         .collapsible:hover {
-            background-color: #444;
+            background-color: #218838;
         }
         .content {
-            padding: 18px;
+            padding: 20px;
             display: none;
             background-color: #f9f9f9;
-            border-left: 4px solid #666;
+            border-left: 4px solid #28a745;
             margin-top: 5px;
-            border-radius: 0 0 5px 5px;
+            border-radius: 0 0 8px 8px;
             font-size: 16px;
             text-align: justify;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #555;
         }
         .spacer {
-            margin-top: 1cm; /* 1cm vertical space between sections */
-        }
-        .spacerx {
-            margin-top: 0.3cm; /* 1cm vertical space between sections */
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -133,7 +140,7 @@
             <img src="https://img.icons8.com/material-outlined/24/000000/marker.png" alt="Location Icon" class="icon">
             <span class="icon-text">Paris, France</span>
         </div>
-        <div class="spacerx"></div>
+        
         <!-- Université Sorbonne Paris Nord -->
         <div>
             <img src="https://img.icons8.com/material-outlined/24/000000/university.png" alt="University Icon" class="icon">
@@ -145,11 +152,11 @@
             <img src="https://img.icons8.com/material-outlined/24/000000/university.png" alt="Bentley University Icon" class="icon">
             <span class="icon-text">Bentley University</span>
         </div>
-           <div class="spacerx"></div>
+
         <!-- Mail Icon -->
         <div>
             <img src="https://img.icons8.com/material-outlined/24/000000/email.png" alt="Mail Icon" class="icon">
-            <a href="mailto:leonhard.kersten@gmail.com" style="text-decoration: none; color: #444;">
+            <a href="mailto:leonhard.kersten@gmail.com">
                 <span class="icon-text">leonhard.kersten@gmail.com</span>
             </a>
         </div>
@@ -160,7 +167,7 @@
         <p>
             My name is Leonhard Kersten, and I am a Ph.D. Candidate in Economics at the Université Sorbonne Paris Nord and Visiting Scholar at the <a href="https://www.bentley.edu/centers/center-for-integration-science-and-industry" target="_blank">Center for the Integration of Science and Industry</a> at Bentley University. 
             I am a Researcher at the <a href="https://theairnet.org/leonhard-kersten/" target="_blank">Academic-Industry Research Network</a> and at the Berlin Centre for Empirical Economics at the Berlin School of Economics and Law.
-            My research interests are corporate financialization, innovation dynamics, and public health. I have worked with a variety of empirical analysis and modelling approaches such as econometric and agent-based modelling.        
+            My research interests are corporate financialization, innovation dynamics, and public health. I have worked with a variety of empirical analysis and modelling approaches such as econometric and agent-based modelling.
         </p>
 
         <h2>CV</h2>
@@ -174,18 +181,14 @@
         </p>
 
         <!-- Project 1 -->
-        <button class="collapsible">Job Market Paper: The Association between Gender Diversity of Companies' Executives and Corporate Tax Avoidance - co-authored with Professor Salmai Qari </button>
+        <button class="collapsible">Job Market Paper: The Association between Gender Diversity of Companies' Executives and Corporate Tax Avoidance - co-authored with Professor Salmai Qari</button>
         <div class="content">
             <p> Abstract: 
-                <div class="spacer"></div>
-                This paper analyzes the possible link between female leadership and corporate tax avoidance. Specifically, the study investigates if companies with women as chief financial officers (CFO) engage less in tax avoidance practices.
-                This analysis compiles a panel of 355 S&P500 listed companies covering the years 2010-2023. Various panel regressions are conducted to establish the relationship between women CFOs and tax avoidance.
-                The various regression models of this study indicate that the presence of a woman CFO is associated with a reduction in corporate tax avoidance. 
-                Concerning the control variables, the associated partial effects are comparable to previous research and provide a further indication of the validity of our results.
-                To the best of the authors' knowledge, this is the first study that compiles an up-to-date panel of comparable and economically important (S\&P500) firms to investigate the link between CFO gender diversity and corporate tax avoidance. 
-                Financial firms (that are prone to tax avoidance) are explicitly excluded. Firm-level and alternatively industry-level fixed effects models are employed to mitigate endogeneity concerns. 
-                The robustness of the results is further probed by considering different sets of control variables.
-                <div class="spacer"></div>
+                This paper analyzes the possible link between female leadership and corporate tax avoidance. Specifically, the study investigates if companies with women as chief financial officers (CFO) engage less in tax avoidance practices. 
+                This analysis compiles a panel of 355 S&P500 listed companies covering the years 2010-2023.
+                Various panel regressions are conducted to establish the relationship between women CFOs and tax avoidance.
+                The study finds that the presence of a woman CFO is associated with a reduction in corporate tax avoidance.
+                <br><br>
                 Currently under review at Corporate Governance: The International Journal of Business in Society (CG).
             </p>
         </div>
@@ -196,18 +199,9 @@
             <p>
                 The COVID-19 pandemic highlighted the importance of drug development and raised critical questions about vaccine ownership and distribution, particularly in the context of global inequities between the North and South.
                 Collaborative efforts, such as the partnership between BioNTech and Pfizer, demonstrated the potential of combining public funding, academic research, and private sector capabilities to innovate and manufacture life-saving vaccines.
-                Collaborations are steadily increasing, driven by the pharmaceutical industry's dynamic nature and the rise in public interest and funding. This trend coincides with the expansion of the biotechnology sector, leading to the creation of new firms
-                that often become targets for collaborations or acquisitions by established players. 
-                Corporate financialization, defined as the subordination of firm strategies to financial motives and actors led by shareholder value ideology, has profoundly shaped these dynamics. 
-                The research focuses on the influence of corporate financialization and post-COVID-19 restructuring on the pharmaceutical industry, including the ethical implications of drug innovation, oligopoly power, and the impact of drug pricing on public health.
-                With the aim of examining and identifying the linkages between the seemingly distinct but implicitly close-knit dynamics of industrial reorganization during finance-led capitalism from a political-economic perspective, 
-                the research questions for the doctoral studies are:
-                <div class="spacerx"></div>
-                - How are collaborations and acquisitions in the pharmaceutical industry organized, what are their determinants, and which dynamics are involved?
-                <div class="spacerx"></div>
-                - How do they impact the drug innovation process and at which stages are which kinds of cooperation commonly used?
-                <div class="spacerx"></div>
-               - Who are the financial and non-financial actors behind the proliferation of strategies and how do their incentives shape the specific role of the actors? What is the impact on the public?
+                Corporate financialization, defined as the subordination of firm strategies to financial motives and actors, has profoundly shaped these dynamics.
+                <br><br>
+                This research focuses on the influence of corporate financialization and post-COVID-19 restructuring on the pharmaceutical industry.
             </p>
         </div>
     </main>
