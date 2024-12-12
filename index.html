@@ -3,53 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Leonhard Kersten</title>
     <style>
         body {
             font-family: 'Helvetica', sans-serif;
-            background: linear-gradient(45deg, #e0e0e0, #f4f4f4), url('https://www.transparenttextures.com/patterns/asfalt-light.png');
-            color: #333;
             margin: 0;
-            padding: 0;
             display: flex;
-            flex-direction: row;
-            min-height: 100vh;
+            height: 100vh;
+            background: linear-gradient(to bottom, #f4f4f4, #e0e0e0), url('https://www.transparenttextures.com/patterns/grey-floral.png');
+            background-repeat: repeat;
+            color: #333;
         }
         .sidebar {
+            width: 300px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
-            background-color: #fff;
-            width: 80px;
-            padding: 20px 0;
-            box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
         }
         .sidebar img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 20px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
+            margin-bottom: 20px;
         }
-        .icon {
-            width: 30px;
-            height: 30px;
-            margin-bottom: 15px;
-            cursor: pointer;
-        }
-        .icon:hover {
-            opacity: 0.7;
-        }
-        main {
+        .sidebar h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
             text-align: center;
-            padding: 20px;
-            max-width: 1000px;
+        }
+        .sidebar .info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            text-align: left;
             width: 100%;
-            margin: 0 auto;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar .info img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .sidebar .info span {
+            font-size: 16px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
         }
         h2 {
             font-size: 28px;
@@ -61,9 +65,6 @@
             line-height: 1.6;
             text-align: justify;
             color: #444;
-        }
-        .cv-link-container {
-            margin-bottom: 40px;
         }
         .cv-link {
             display: inline-block;
@@ -77,101 +78,45 @@
         .cv-link:hover {
             background-color: #444;
         }
-        .collapsible {
-            background-color: #666;
-            color: white;
-            cursor: pointer;
-            padding: 14px;
-            width: 100%;
-            text-align: left;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            margin-top: 10px;
-            transition: background-color 0.3s;
-        }
-        .collapsible:hover {
-            background-color: #444;
-        }
-        .content {
-            padding: 18px;
-            display: none;
-            background-color: #f9f9f9;
-            border-left: 4px solid #666;
-            margin-top: 5px;
-            border-radius: 0 0 5px 5px;
-            font-size: 16px;
-            text-align: justify;
-            line-height: 1.6;
-            color: #555;
-        }
     </style>
 </head>
 <body>
-
     <div class="sidebar">
         <img src="https://github.com/leonhardkersten/leonhardkersten.github.io/blob/main/Leo-4.jpg?raw=true" alt="Leonhard Kersten">
-        <img src="https://img.icons8.com/material-outlined/24/000000/marker.png" alt="Location Icon" class="icon">
-        <img src="https://img.icons8.com/material-outlined/24/000000/university.png" alt="University Icon" class="icon">
-        <img src="https://img.icons8.com/material-outlined/24/000000/email.png" alt="Mail Icon" class="icon">
+        <h2>Leonhard Kersten</h2>
+        <div class="info">
+            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location Icon">
+            <span>Paris, France</span>
+        </div>
+        <div class="info">
+            <img src="https://cdn-icons-png.flaticon.com/512/684/684910.png" alt="University Icon">
+            <span>Université Sorbonne Paris Nord</span>
+        </div>
+        <div class="info">
+            <img src="https://cdn-icons-png.flaticon.com/512/684/684910.png" alt="University Icon">
+            <span>Bentley University</span>
+        </div>
+        <div class="info">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon">
+            <span><a href="mailto:leonhard.kersten@gmail.com" style="color: #fff; text-decoration: none;">leonhard.kersten@gmail.com</a></span>
+        </div>
     </div>
 
-    <main>
+    <div class="content">
         <h2>About Me</h2>
         <p>
-            My name is Leonhard Kersten, and I am a PhD Candidate at the Université Sorbonne Paris Nord and Visiting Scholar at the Center for the Integration of Science and Industry at Bentley University.
+            My name is Leonhard Kersten, and I am a Ph.D. Candidate at the Université Sorbonne Paris Nord and Visiting Scholar at the Center for the Integration of Science and Industry at Bentley University.
             I am a Researcher at the <a href="https://theairnet.org/leonhard-kersten/" target="_blank">Academic-Industry Research Network</a> and at the Berlin Centre for Empirical Economics at the Berlin School of Economics and Law.
-            My research interests are corporate financialization, innovation dynamics, and public health using a variety of analytical approaches such as econometric analysis and agent-based modelling.
+            My research interests are corporate financialization, innovation dynamics, and public health outcomes.
         </p>
 
         <h2>CV</h2>
-        <div class="cv-link-container">
-            <a href="https://github.com/leonhardkersten/leonhardkersten.github.io/raw/main/cv.pdf" class="cv-link" target="_blank">Click here to view my CV</a>
-        </div>
+        <a href="https://github.com/leonhardkersten/leonhardkersten.github.io/raw/main/cv.pdf" class="cv-link" target="_blank">Click here to view my CV</a>
 
         <h2>Research Projects</h2>
         <p>
-            Explore my research projects below, where you will find my current Job Market paper and a detailed description of my research as part of the PhD thesis.
+            Explore my research projects below, where you will find my current Job Market paper and a detailed description of my research as part of the Ph.D. thesis.
         </p>
-
-        <!-- Project 1 -->
-        <button class="collapsible">Job Market Paper: The Association between Gender Diversity of Companies' Executives and Corporate Tax Avoidance - co-authored with Professor Salmai Qari </button>
-        <div class="content">
-            <p> Abstract: 
-                <div class="spacer"></div>
-                This paper analyzes the possible link between female leadership and corporate tax avoidance. Specifically, the study investigates if companies with women as chief financial officers (CFO) engage less in tax avoidance practices.
-                This analysis compiles a panel of 355 S&P500 listed companies covering the years 2010-2023. Various panel regressions are conducted to establish the relationship between women CFOs and tax avoidance.
-                The various regression models of this study indicate that the presence of a woman CFO is associated with a reduction in corporate tax avoidance. 
-                Concerning the control variables, the associated partial effects are comparable to previous research and provide a further indication of the validity of our results.
-                To the best of the authors' knowledge, this is the first study that compiles an up-to-date panel of comparable and economically important (S\&P500) firms to investigate the link between CFO gender diversity and corporate tax avoidance. 
-                Financial firms (that are prone to tax avoidance) are explicitly excluded. Firm-level and alternatively industry-level fixed effects models are employed to mitigate endogeneity concerns. 
-                The robustness of the results is further probed by considering different sets of control variables.
-                <div class="spacer"></div>
-                Currently under review at Corporate Governance: The International Journal of Business in Society (CG).
-            </p>
-        </div>
-
-        <!-- Project 2 -->
-        <button class="collapsible"> PhD research: The evolution of the pharmaceutical industrial ecosystem in times of biotech innovation, corporate financialization and COVID-19</button>
-        <div class="content">
-            <p>
-                The COVID-19 pandemic highlighted the importance of drug development and raised critical questions about vaccine ownership and distribution, particularly in the context of global inequities between the North and South.
-                Collaborative efforts, such as the partnership between BioNTech and Pfizer, demonstrated the potential of combining public funding, academic research, and private sector capabilities to innovate and manufacture life-saving vaccines.
-                Collaborations are steadily increasing, driven by the pharmaceutical industry's dynamic nature and the rise in public interest and funding. This trend coincides with the expansion of the biotechnology sector, leading to the creation of new firms
-                that often become targets for collaborations or acquisitions by established players. 
-                Corporate financialization, defined as the subordination of firm strategies to financial motives and actors led by shareholder value ideology, has profoundly shaped these dynamics. 
-                The research focuses on the influence of corporate financialization and post-COVID-19 restructuring on the pharmaceutical industry, including the ethical implications of drug innovation, oligopoly power, and the impact of drug pricing on public health.
-                With the aim of examining and identifying the linkages between the seemingly distinct but implicitly close-knit dynamics of industrial reorganization during finance-led capitalism from a political-economic perspective, 
-                the research questions for this doctoral study are:
-                <div class="spacer"></div>
-                - How are collaborations and acquisitions in the pharmaceutical industry organized, what are their determinants, and which dynamics are involved?
-                <div class="spacer"></div>
-                - How do they impact the drug innovation process and at which stages are which kinds of cooperation commonly used?
-                <div class="spacer"></div>
-                - Who are the financial and non-financial actors behind the proliferation of strategies and how do their incentives shape the specific role of the actors? What is the impact on the public?
-            </p>
-        </div>
-    </main>
-
+    </div>
 </body>
 </html>
