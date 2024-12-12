@@ -36,16 +36,20 @@
         .sidebar .icon {
             width: 20px;
             height: 20px;
-            margin-bottom: 10px;
+            margin-right: 10px;
             cursor: pointer;
         }
         .sidebar .icon-text {
             font-size: 14px;
-            margin-left: 10px;
             color: #444;
         }
         .icon:hover {
             opacity: 0.7;
+        }
+        .sidebar div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
         }
         main {
             text-align: center;
@@ -123,21 +127,27 @@
 
     <div class="sidebar">
         <img src="https://github.com/leonhardkersten/leonhardkersten.github.io/blob/main/Leo-4.jpg?raw=true" alt="Leonhard Kersten" class="profile">
-        <div style="display: flex; align-items: center;">
+        
+        <!-- Location Icon -->
+        <div>
             <img src="https://img.icons8.com/material-outlined/24/000000/marker.png" alt="Location Icon" class="icon">
             <span class="icon-text">Paris, France</span>
         </div>
-        <div class="spacerx"></div>
-        <div style="display: flex; align-items: center;">
+
+        <!-- Université Sorbonne Paris Nord -->
+        <div>
             <img src="https://img.icons8.com/material-outlined/24/000000/university.png" alt="University Icon" class="icon">
             <span class="icon-text">Université Sorbonne Paris Nord</span>
         </div>
-        <div style="display: flex; align-items: center;">
+
+        <!-- Bentley University -->
+        <div>
             <img src="https://img.icons8.com/material-outlined/24/000000/university.png" alt="Bentley University Icon" class="icon">
             <span class="icon-text">Bentley University</span>
         </div>
-         <div class="spacerx"></div>
-        <div style="display: flex; align-items: center;">
+
+        <!-- Mail Icon -->
+        <div>
             <img src="https://img.icons8.com/material-outlined/24/000000/email.png" alt="Mail Icon" class="icon">
             <a href="mailto:leonhard.kersten@gmail.com" style="text-decoration: none; color: #444;">
                 <span class="icon-text">leonhard.kersten@gmail.com</span>
@@ -192,11 +202,11 @@
                 The research focuses on the influence of corporate financialization and post-COVID-19 restructuring on the pharmaceutical industry, including the ethical implications of drug innovation, oligopoly power, and the impact of drug pricing on public health.
                 With the aim of examining and identifying the linkages between the seemingly distinct but implicitly close-knit dynamics of industrial reorganization during finance-led capitalism from a political-economic perspective, 
                 the research questions for this doctoral study are:
-                <div class="spacer"></div>
+                <div class="spacerx"></div>
                 - How are collaborations and acquisitions in the pharmaceutical industry organized, what are their determinants, and which dynamics are involved?
-                <div class="spacer"></div>
+                <div class="spacerx"></div>
                 - How do they impact the drug innovation process and at which stages are which kinds of cooperation commonly used?
-                <div class="spacer"></div>
+                <div class="spacerx"></div>
                - Who are the financial and non-financial actors behind the proliferation of strategies and how do their incentives shape the specific role of the actors? What is the impact on the public?
             </p>
         </div>
