@@ -17,21 +17,6 @@
             flex-direction: row;
             min-height: 100vh;
         }
-        /* Top bar styling */
-        .top-bar {
-            height: 1cm;
-            background-color: #d3d3d3; /* Light gray color */
-            color: white;
-            text-align: center;
-            font-size: 16px;
-            line-height: 1cm;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-        }
-
         .sidebar {
             display: flex;
             flex-direction: column;
@@ -41,7 +26,6 @@
             width: 200px;
             padding: 20px;
             box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
-            margin-top: 1cm; /* Adjust sidebar position to account for top bar */
         }
         .sidebar img.profile {
             width: 80px;
@@ -76,7 +60,6 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 1.5cm; /* Adjust main content position */
         }
         h2 {
             font-size: 28px;
@@ -141,10 +124,6 @@
     </style>
 </head>
 <body>
-
-    <!-- Top Bar -->
-    <div class="top-bar">
-    </div>
 
     <div class="sidebar">
         <img src="https://github.com/leonhardkersten/leonhardkersten.github.io/blob/main/Leo-4.jpg?raw=true" alt="Leonhard Kersten" class="profile">
