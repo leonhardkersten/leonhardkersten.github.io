@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Leonhard Kersten</title>
     <style>
+        /* General Styles */
         body {
             font-family: 'Helvetica', sans-serif;
             background: linear-gradient(135deg, #f0f0f0, #ffffff);
@@ -14,7 +15,9 @@
             padding: 0;
             display: flex;
             min-height: 100vh;
+            flex-direction: row; /* Default for desktop */
         }
+
         .sidebar {
             display: flex;
             flex-direction: column;
@@ -27,6 +30,7 @@
             border-radius: 8px;
             margin: 20px;
         }
+
         .sidebar img.profile {
             width: 100px;
             height: 100px;
@@ -34,29 +38,35 @@
             border-radius: 50%;
             border: 3px solid #ddd;
         }
+
         .sidebar .icon {
             width: 20px;
             height: 20px;
             margin-right: 10px;
             cursor: pointer;
         }
+
         .sidebar .icon-text {
             font-size: 15px;
             color: #555;
         }
+
         .sidebar div {
             display: flex;
             align-items: center;
             margin-bottom: 15px;
             transition: color 0.3s;
         }
+
         .sidebar div:hover {
             color: #007BFF;
         }
+
         .sidebar a {
             text-decoration: none;
             color: inherit;
         }
+
         main {
             flex: 1;
             text-align: center;
@@ -68,11 +78,13 @@
             border-radius: 12px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
         }
+
         h2 {
             font-size: 32px;
             margin-bottom: 15px;
             color: #444;
         }
+
         p {
             font-size: 18px;
             line-height: 1.7;
@@ -81,9 +93,11 @@
             max-width: 800px;
             margin: 0 auto 20px;
         }
+
         .cv-link-container {
             margin-bottom: 30px;
         }
+
         .cv-link {
             display: inline-block;
             background-color: #666;
@@ -94,9 +108,11 @@
             font-weight: bold;
             transition: background-color 0.3s;
         }
+
         .cv-link:hover {
             background-color: #444;
         }
+
         .collapsible {
             background-color: #f4f4f4;
             color: #333;
@@ -110,10 +126,12 @@
             margin-top: 10px;
             transition: background-color 0.3s, color 0.3s;
         }
+
         .collapsible:hover {
             background-color: #e0e0e0;
             color: #000;
         }
+
         .content {
             padding: 20px;
             display: none;
@@ -126,8 +144,63 @@
             line-height: 1.7;
             color: #555;
         }
+
         .spacer {
             margin-top: 20px;
+        }
+
+        /* Responsive Styles for Mobile */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                flex-direction: row;
+                justify-content: space-around;
+                width: 100%;
+                padding: 15px;
+                box-shadow: none;
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .sidebar img.profile {
+                width: 60px;
+                height: 60px;
+            }
+
+            .sidebar div {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            main {
+                padding: 20px;
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .cv-link {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .collapsible {
+                font-size: 16px;
+            }
+
+            .content {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -167,8 +240,8 @@
         <h2>About Me</h2>
         <p>
             My name is Leonhard Kersten, and I am a Ph.D. Candidate in Economics at the Université Sorbonne Paris Nord and Visiting Scholar at the <a href="https://www.bentley.edu/centers/center-for-integration-science-and-industry" target="_blank">Center for the Integration of Science and Industry</a> at Bentley University. 
-            I am a Researcher at the <a href="https://theairnet.org/leonhard-kersten/" target="_blank">Academic-Industry Research Network</a> and at the <a href=https://www.bcee.hwr-berlin.de/en/" target="_blank">Berlin Centre for Empirical Economics</a> at the Berlin School of Economics and Law.
-            My research interests are corporate financialization, innovation dynamics, and public health. I have worked with a variety of empirical analysis and modelling approaches such as econometric and agent-based modelling.
+            I am a Researcher at the <a href="https://theairnet.org/leonhard-kersten/" target="_blank">Academic-Industry Research Network</a> and at the <a href=https://www.bcee.hwr-berlin.de/en" target="_blank">Berlin Centre for Empirical Economics</a> at the Berlin School of Economics and Law.
+            My research interests are corporate financialization, innovation dynamics, and public health. I have worked with a variety of empirical analysis tools including econometric and agent-based modelling.
         </p>
 
         <h2>CV</h2>
@@ -181,11 +254,9 @@
             Explore my research projects below, where you will find my current Job Market paper and a detailed description of my research as part of the Ph.D. thesis.
         </p>
 
- <!-- Project 1 -->
-        <button class="collapsible">Job Market Paper: The Association between Gender Diversity of Companies' Executives and Corporate Tax Avoidance - co-authored with Professor Salmai Qari </button>
+        <button class="collapsible">Job Market Paper: The Association between Gender Diversity of Companies' Executives and Corporate Tax Avoidance - co-authored with href=https://userpage.fu-berlin.de/qari" target="_blank">Salmai Qari</a></button>
         <div class="content">
-            <p> Abstract: 
-                <div class="spacer"></div>
+            <p>
                 This paper analyzes the possible link between female leadership and corporate tax avoidance. Specifically, the study investigates if companies with women as chief financial officers (CFO) engage less in tax avoidance practices.
                 This analysis compiles a panel of 355 S&P500 listed companies covering the years 2010-2023. Various panel regressions are conducted to establish the relationship between women CFOs and tax avoidance.
                 The various regression models of this study indicate that the presence of a woman CFO is associated with a reduction in corporate tax avoidance. 
@@ -198,11 +269,10 @@
             </p>
         </div>
 
-        <!-- Project 2 -->
         <button class="collapsible">Ph.D. research: The evolution of the pharmaceutical industrial ecosystem in times of biotech innovation, corporate financialization and COVID-19</button>
         <div class="content">
             <p>
-                The COVID-19 pandemic highlighted the importance of drug development and raised critical questions about vaccine ownership and distribution, particularly in the context of global inequities between the North and South.
+           The COVID-19 pandemic highlighted the importance of drug development and raised critical questions about vaccine ownership and distribution, particularly in the context of global inequities between the North and South.
                 Collaborative efforts, such as the partnership between BioNTech and Pfizer, demonstrated the potential of combining public funding, academic research, and private sector capabilities to innovate and manufacture life-saving vaccines.
                 Collaborations are steadily increasing, driven by the pharmaceutical industry's dynamic nature and the rise in public interest and funding. This trend coincides with the expansion of the biotechnology sector, leading to the creation of new firms
                 that often become targets for collaborations or acquisitions by established players. 
@@ -220,19 +290,13 @@
         </div>
     </main>
 
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    for (var i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
+    <script>
+        const coll = document.querySelectorAll(".collapsible");
+        coll.forEach(button => button.addEventListener("click", function () {
             this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        });
-    }
-</script>
+            const content = this.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }));
+    </script>
 </body>
-               
+</html>
